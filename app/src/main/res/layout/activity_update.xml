@@ -6,46 +6,46 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".AddReminder">
+    tools:context=".Update">
 
     <TextView
-        android:id="@+id/addReminderHeading"
+        android:id="@+id/editReminderHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Add Task"
+        android:text="Edit Task"
         android:textColor="@color/blue"
         android:textSize="24sp" />
 
     <ImageView
-        android:id="@+id/save"
+        android:id="@+id/editsave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/baseline_done_24"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@id/addReminderHeading"
+        android:layout_alignTop="@id/editReminderHeading"
         android:layout_marginEnd="6dp" />
 
     <EditText
-        android:id="@+id/titleEditText"
+        android:id="@+id/updatetitleEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:hint="Enter the title"
         android:padding="12dp"
         android:textSize="20sp"
-        android:layout_below="@id/addReminderHeading"
+        android:layout_below="@id/editReminderHeading"
         android:background="@drawable/blue_border"
         android:layout_marginTop="16dp"
         android:maxLines="1"
         android:fontFamily="sans-serif-condensed-medium" />
 
     <EditText
-        android:id="@+id/contentEditText"
+        android:id="@+id/updatecontentEditText"
         android:layout_width="395dp"
         android:layout_height="160dp"
-        android:layout_below="@id/titleEditText"
+        android:layout_below="@id/updatetitleEditText"
         android:layout_marginTop="12dp"
         android:background="@drawable/blue_border"
         android:fontFamily="sans-serif-condensed-medium"
@@ -56,19 +56,19 @@
 
     <!-- Button to select date -->
     <Button
-        android:id="@+id/selectDateButton"
+        android:id="@+id/updateselectDateButton"
         android:layout_width="364dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/contentEditText"
+        android:layout_below="@id/updatecontentEditText"
         android:layout_marginTop="16dp"
         android:text="Select Date" />
 
     <!-- Button to select time -->
     <Button
-        android:id="@+id/selectTimeButton"
+        android:id="@+id/updateselectTimeButton"
         android:layout_width="367dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/selectDateButton"
+        android:layout_below="@id/updateselectDateButton"
         android:layout_marginTop="0dp"
         android:text="Select Time" />
 

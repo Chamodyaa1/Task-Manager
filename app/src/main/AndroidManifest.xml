@@ -13,7 +13,13 @@
         android:theme="@style/Theme.TaskManager"
         tools:targetApi="31">
         <activity
-            android:name=".addReminder"
+            android:name=".launch"
+            android:exported="false" />
+        <activity
+            android:name=".Update"
+            android:exported="false" />
+        <activity
+            android:name=".AddReminder"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
