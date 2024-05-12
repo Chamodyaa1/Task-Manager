@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".addReminder">
+
+    <TextView
+        android:id="@+id/addReminderHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Add Task"
+        android:textColor="@color/blue"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_done_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/addReminderHeading"
+        android:layout_marginEnd="6dp" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Enter the title"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:layout_below="@id/addReminderHeading"
+        android:background="@drawable/blue_border"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"
+        android:fontFamily="sans-serif-condensed-medium" />
+
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="395dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/titleEditText"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="top"
+        android:hint="Enter the description"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+    <!-- Button to select date -->
+    <Button
+        android:id="@+id/selectDateButton"
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contentEditText"
+        android:layout_marginTop="16dp"
+        android:text="Select Date" />
+
+    <!-- Button to select time -->
+    <Button
+        android:id="@+id/selectTimeButton"
+        android:layout_width="367dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectDateButton"
+        android:layout_marginTop="0dp"
+        android:text="Select Time" />
+
+</RelativeLayout>
