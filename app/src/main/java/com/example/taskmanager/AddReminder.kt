@@ -7,7 +7,7 @@ import com.example.taskmanager.databinding.ActivityAddReminderBinding
 
 class AddReminder : AppCompatActivity() {
     private lateinit var binding: ActivityAddReminderBinding
-    private lateinit var db:NotesDatabaseHelper
+    private lateinit var db: NotesDatabaseHelper
 
     override fun onCreate(savedInstance: Bundle?) {
         super.onCreate(savedInstanceState = null)
