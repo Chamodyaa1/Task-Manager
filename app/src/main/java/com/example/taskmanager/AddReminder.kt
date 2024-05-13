@@ -9,8 +9,8 @@ class AddReminder : AppCompatActivity() {
     private lateinit var binding: ActivityAddReminderBinding
     private lateinit var db: NotesDatabaseHelper
 
-    override fun onCreate(savedInstance: Bundle?) {
-        super.onCreate(savedInstanceState = null)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         binding = ActivityAddReminderBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
