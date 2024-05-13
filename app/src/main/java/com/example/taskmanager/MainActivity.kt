@@ -8,20 +8,23 @@ import com.example.taskmanager.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var db :NotesDatabaseHelper
-    private lateinit var ReminderAdapter:ReminderAdapter
+    private lateinit var db: NotesDatabaseHelper
+    private lateinit var reminderAdapter: ReminderAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Initialize database helper
         db = NotesDatabaseHelper(this)
-        ReminderAdapter = ReminderAdapter(db.getAllReminders(),this)
 
-        binding.remindersRecyclerView.layoutManager=LinearLayoutManager(this)
-        binding.remindersRecyclerView.adapter = ReminderAdapter
+        // Initialize RecyclerView and adapter
+        reminderAdapter = ReminderAdapter(db.getAllReminders(), this)
+        binding.remindersRecyclerView.layoutManager = LinearLayoutManager(this)
+        binding.remindersRecyclerView.adapter = reminderAdapter
 
+        // Set click listener for addButton
         binding.addButton.setOnClickListener {
             val intent = Intent(this, AddReminder::class.java)
             startActivity(intent)
@@ -30,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        ReminderAdapter.refreshData(db.getAllReminders())
+        // Refresh data when activity resumes
+        reminderAdapter.refreshData(db.getAllReminders())
     }
 }

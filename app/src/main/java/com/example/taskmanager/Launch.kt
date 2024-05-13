@@ -11,7 +11,7 @@ class Launch : AppCompatActivity() {
         setContentView(R.layout.activity_launch)
     }
 
-    fun launch(view: View) {
+    fun main(view: View) {
         val intent = Intent(this, MainActivity  ::class.java)
         startActivity(intent)
     }

@@ -54,22 +54,4 @@
         android:padding="12dp"
         android:textSize="18sp" />
 
-    <!-- Button to select date -->
-    <Button
-        android:id="@+id/selectDateButton"
-        android:layout_width="364dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/contentEditText"
-        android:layout_marginTop="16dp"
-        android:text="Select Date" />
-
-    <!-- Button to select time -->
-    <Button
-        android:id="@+id/selectTimeButton"
-        android:layout_width="367dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/selectDateButton"
-        android:layout_marginTop="0dp"
-        android:text="Select Time" />
-
 </RelativeLayout>
