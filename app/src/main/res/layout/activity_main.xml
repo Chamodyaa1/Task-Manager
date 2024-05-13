@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <TextView
         android:id="@+id/reminderHeading"
         android:layout_width="wrap_content"
@@ -16,7 +18,26 @@
         android:layout_marginStart="18dp"
         android:textColor="@color/blue"
         android:textSize="24sp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints" /><![CDATA[
+
+
+     />
+
+    ]]>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="243dp"
+        android:layout_height="33dp"
+        android:layout_below="@id/reminderHeading"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="16dp"
+        android:queryHint="Search notes..."
+        app:iconifiedByDefault="false"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/remindersRecyclerView"
